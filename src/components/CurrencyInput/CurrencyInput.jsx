@@ -24,11 +24,15 @@ const CurrencyInput = ({
         <input
           id={amountId}
           className="outline-none w-full bg-transparent py-1.5"
-          type="number"
+          type="text"
           placeholder="Amount"
           disabled={amountDisabled}
           value={Number(amount)}
-          onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
+          //onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
+          onChange={(e) => {
+            const value = e.target.value.trim(); // Trim leading and trailing spaces
+            onAmountChange && onAmountChange(value !== '' ? parseFloat(value) : ''); // Convert to number or keep it empty
+          }}
         />
       </div>
       <div className="w-1/2 flex flex-wrap justify-end text-right">
@@ -54,7 +58,8 @@ const CurrencyInput = ({
 
 CurrencyInput.propTypes = {
   label: PropTypes.string.isRequired,
-  amount: PropTypes.number,
+  //amount: PropTypes.number,
+  amount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   onAmountChange: PropTypes.func,
   currency: PropTypes.string,
   onCurrencyChange: PropTypes.func,

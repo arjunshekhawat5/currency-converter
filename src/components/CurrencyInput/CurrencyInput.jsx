@@ -27,7 +27,7 @@ const CurrencyInput = ({
           type="number"
           placeholder="Amount"
           disabled={amountDisabled}
-          value={amount}
+          value={Number(amount)}
           onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
         />
       </div>
@@ -55,9 +55,9 @@ const CurrencyInput = ({
 CurrencyInput.propTypes = {
   label: PropTypes.string.isRequired,
   amount: PropTypes.number,
-  onAmountChange: PropTypes.func.isRequired,
+  onAmountChange: PropTypes.func,
   currency: PropTypes.string,
-  onCurrencyChange: PropTypes.func.isRequired,
+  onCurrencyChange: PropTypes.func,
   allCurrencies: PropTypes.array,
   amountDisabled: PropTypes.bool,
   currencyDisabled: PropTypes.bool,

@@ -2,6 +2,8 @@
 
 This is a simple React application for currency conversion. It allows users to input an amount in one currency and see the equivalent amount in another currency.
 
+Convert at - https://currency-converter-jc8z.onrender.com/
+
 ## Features
 
 - Input field for entering the amount in a specified currency.
@@ -9,6 +11,13 @@ This is a simple React application for currency conversion. It allows users to i
 - Real-time currency data fetched from an external API.
 - Swap functionality to switch between input and output currencies.
 - Responsive design for use on various devices.
+
+## Usage
+
+- Enter the amount you want to convert in the "From" input field.
+- Select the input currency type from the dropdown menu.
+- Select the output currency type from the dropdown menu.
+- Click the "Convert" button to see the converted amount in   the "To" input field.
 
 ## Technologies Used
 
@@ -28,7 +37,7 @@ This is a simple React application for currency conversion. It allows users to i
 1. Clone the repository to your local machine:
 
 ```
-git clone https://github.com/your-username/currency-conversion-app.git
+git clone https://github.com/arjunshekhawat5/currency-conversion-app.git
 ```
 
 2. Navigate to the project directory:
@@ -46,14 +55,7 @@ npm install
 4. Start the development server:
 
 ```
-npm start
+npm run dev
 ```
 
 5. Open your web browser and visit `http://localhost:3000` to view the application.
-
-## Usage
-
-- Enter the amount you want to convert in the "From" input field.
-- Select the input currency type from the dropdown menu.
-- Select the output currency type from the dropdown menu.
-- Click the "Convert" button to see the converted amount in the "To" input field.
